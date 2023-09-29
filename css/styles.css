@@ -1,0 +1,156 @@
+:root{
+    --font1: 'Open Sans', sans-serif;
+--font2: 'Poppins', sans-serif;
+
+--Violet: hsl(257, 40%, 49%);
+--Soft-Magenta: hsl(300, 69%, 71%);
+--padding-container: 60px 0;
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: var(--font1);  
+    background-color: var(--Violet);
+}
+.hero{
+    background-color: var(--Violet);
+    position: relative;
+
+}
+
+.hero::before{
+    content: "";
+    position:absolute;
+    top: 0;
+    width: 100%;
+    height: 450px;
+    background-image: url("../images/bg-mobile.svg");
+    background-repeat: no-repeat;
+   background-size: 100% 400px;
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+  position: relative;
+    overflow: hidden;
+    max-width: 1200px;
+    padding: var(--padding-container);
+}
+
+.nav{
+--padding-container: 30px 0;
+}
+
+.nav__logo{
+    width: 150px;
+    display: block;
+}
+
+.hero__container{
+display: flex;
+align-items: center;
+flex-direction: column;
+
+}
+
+
+.hero__img{
+    max-width: 350px;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.hero__title{
+   
+   font-size: 1.7rem;
+font-family: var(--font2);
+}
+.hero__texts{
+    color: #fff;
+    margin: 3.5em 0;
+   text-align: center;
+}
+.hero__paragraph{
+line-height: 1.5;
+margin: 1.2em 0 1.7em;
+}
+
+.hero__cta{
+ display: inline-block;
+ color: var(--Violet);
+ background-color: #fff;
+text-decoration: none;
+padding: 1em 6em;
+border-radius: 2em;
+box-shadow: 0 1px 4px rgb(0,0,0, .5);
+}
+
+.hero__cta:hover{
+    background-color: var(--Soft-Magenta);
+    color: #fff;
+    cursor: pointer;
+}
+
+.hero__contact{
+    display: flex;
+    gap: 1.5em;
+  
+}
+
+.hero__link{
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Violet)
+
+}
+
+.hero__icon{
+   
+    width: 23px;
+  
+}
+@media screen and (min-width: 768px) {
+  
+ .hero::before{
+    height: 100%;
+    background-image: url("../images/bg-desktop.svg");
+    background-size: 100% 100%;
+
+ }
+.hero__container{
+  flex-direction: row;
+  flex-wrap: wrap;  
+  justify-content: space-between;
+  align-items: center;
+  --pading-container:20px 0 60px
+}
+
+.hero__picture{
+    flex-basis: 45%;
+
+}
+.hero__img{
+    max-width: unset;
+}
+.hero__texts{
+    flex-basis: 50%;
+}
+
+.hero__contact{
+   margin-left: auto;
+}
+.hero__title{
+    font-size: 2rem;
+}
+}
